@@ -22,10 +22,12 @@ class BaseModel:
 
             self.created_at = datetime.utcnow()
             self.updated_at = datetime.utcnow()
+        models.storage.new(self)
 
     def save(self):
         """Updates updated_at with current datetime"""
         self.updated_at = datetime.utcnow()
+        models.storage.save() 
 
     def to_dict(self):
         """returns a dictionary containing all values of __dict__ of the instance"""
