@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
 """Module for the  BaseModel class"""
+
 import uuid
 from datetime import datetime
+import models
 
 class BaseModel:
     """Base class for all the classes in the project"""
