@@ -87,3 +87,6 @@ EOF  help  quit
 
 ## Conclusion
 The ALX-Holberton BnB project offers an in-depth exploration of various software engineering concepts, providing a comprehensive learning experience in full-stack development. Through this README, you're equipped with essential information to navigate and contribute effectively to this project.
+
+## Contact
+For any inquiries or feedback, please contact [Ivy Jebet, Earljoe Kadima](mailto:your-jebetivy388@gmail.com, ).
