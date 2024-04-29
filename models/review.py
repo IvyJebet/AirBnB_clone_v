@@ -4,20 +4,16 @@
 It defines one class, `Review(),
 which sub-classes the `BaseModel()` class.`
 """
-from models.base_model import BaseModel
+from models.base_model import BaseModel, Base
+from sqlalchemy import Column, String, ForeignKey
 
 
-class Review(BaseModel):
-    """A review of a place/house.
+class Review(BaseModel, Base):
+    """ Review class to store review information """
+    __tablename__ = "reviews"
 
-    It represents a review posted by the users
-    of the application about a place/house.
-
-    Attributes:
-        text
-        user_id
-        place_id
-    """
-    text = ""
-    user_id = ""
-    place_id = ""
+    text = Column("text", String(1024), nullable=False)
+    place_id = Column(
+        "place_id", String(60), ForeignKey("places.id"), nullable=False)
+    user_id = Column(
+        "user_id", String(60), ForeignKey("users.id"), nullable=False)
