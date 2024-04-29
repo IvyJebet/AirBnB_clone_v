@@ -4,7 +4,7 @@
 It defines one class, `Amenity(),
 which sub-classes the `BaseModel()` class.`
 """
-from models.base_model import BaseModel
+from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String
 
 
