@@ -5,13 +5,11 @@ It defines one class, `Amenity(),
 which sub-classes the `BaseModel()` class.`
 """
 from models.base_model import BaseModel
+from sqlalchemy import Column, String
 
 
-class Amenity(BaseModel):
-    """An amenity provided by a place/house.
-
-    Attributes:
-        name
+class Amenity(BaseModel, Base):
+    """The amenity class, contains name field and places relationship.
     """
-
-    name = ""
+    __tablename__ = "amenities"
+    name = Column('name', String(128), nullable=False)
